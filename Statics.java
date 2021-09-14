@@ -3,7 +3,7 @@ package keyword;
 public class Statics {
 	  public static void countofcpp(String[] words,String text)
 	  { int totalnum=0;
-		  for(int i=0;i<words.length;i++)
+            for(int i=0;i<words.length;i++)
 	   {   String word=words[i];
 	    int count=0;
 	    String copytext=text;

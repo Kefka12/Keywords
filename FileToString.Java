@@ -9,7 +9,7 @@ public class FileToString {
 	   public static String filetostring(String path)
 	   {
 		   
-		String content=null; 
+		   String content=null; 
 	        try {
 	 
 	            // default StandardCharsets.UTF_8

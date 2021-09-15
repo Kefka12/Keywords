@@ -11,7 +11,6 @@ public class StaticsOfKeywords {
 	  { Map<String,Integer>map = new HashMap<>();
 	     int totalnum=0;
 		  ArrayList<Integer> list= new ArrayList<Integer>();
-		  //list.add(2);
 		  for(int i=0;i<words.length;i++)
 	   { String word=words[i];
 	    int count=0;

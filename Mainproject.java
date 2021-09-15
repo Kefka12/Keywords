@@ -6,7 +6,7 @@ public class Mainproject {
 		String path=null;
 		if(args.length==0) {path = "d:\\test.cpp";}
 		else path=args[0];
-        String text=FileToString.filetostring(path);
+                String text=FileToString.filetostring(path);
 		String[] keywords={"do","auto","break","case","char","const"
 				,"continue","default","double","else","enum"
 				,"extern","float","for","goto","if","int","long","register"

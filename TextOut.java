@@ -13,9 +13,9 @@ public class TextOut {
 			    else
 			    {
 			    	System.out.printf("%s num:",i);
-			    	for(int k=0;k<list.size();k++)
-			    	{System.out.printf(" %d",list.get(k));
-			    	}
+			    	 for(int k=0;k<list.size();k++)
+			    	 {System.out.printf(" %d",list.get(k));
+			    	 }
 			    	System.out.printf("\n");
 			    }
 	        }

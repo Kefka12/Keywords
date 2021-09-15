@@ -5,12 +5,12 @@ import java.util.Stack;
 
 public class SearchIfAndElse {
 	public static int[] search(String text)
-	{    int[] num= {0,0};//num[0]´æ·Åif-else½á¹¹Êý£¬num[1]´æ·Åif-else-if½á¹¹Êý;     
+	{    int[] num= {0,0};//num[0]å­˜æ”¾if-elseç»“æž„æ•°ï¼Œnum[1]å­˜æ”¾if-else-ifç»“æž„æ•°;     
 	     ArrayList<String> list= new ArrayList<String>();
 	     int index1=0,index2=0,index3=0;
-	      boolean flag1=JudgeOfKeywords.judgeif(text, "if");
-	      boolean flag2=JudgeOfKeywords.judgeif(text, "else");
-	      boolean flag3=JudgeOfKeywords.judgeif(text, "else if");		  
+	     boolean flag1=JudgeOfKeywords.judgeif(text, "if");
+	     boolean flag2=JudgeOfKeywords.judgeif(text, "else");
+	     boolean flag3=JudgeOfKeywords.judgeif(text, "else if");		  
 		  while(flag1||flag2||flag3)
 		{  if(flag1) index1 = text.indexOf("if");
 		   int index=0;

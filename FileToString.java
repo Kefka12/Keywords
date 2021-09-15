@@ -9,7 +9,7 @@ public class FileToString {
 	   public static String filetostring(String path)
 	   {
 		   
-		   String content=null; 
+		 String content=null; 
 	        try {
 	 
 	            content = Files.readString(Paths.get(path));
@@ -20,5 +20,5 @@ public class FileToString {
 	            e.printStackTrace();
 	        }
 	        return content;
-	   }
+	  }
 }

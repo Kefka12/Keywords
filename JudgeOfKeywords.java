@@ -27,8 +27,8 @@ public class JudgeOfKeywords {
 			   }
 		  }
 		  else
-		  {  while(text.contains(word)) 
-			   {char judge1=text.charAt(index+ word.length());
+		  {     while(text.contains(word)) 
+	              {char judge1=text.charAt(index+ word.length());
 			    char judge2=' ';
 			    if(index>0) judge2=text.charAt(index-1);
 			    if((judge1>='a'&&judge1<='z')||(judge1>='A'&&judge1<='Z')||(judge1>='0'&&judge1<='9')||(judge1=='_')
@@ -41,7 +41,7 @@ public class JudgeOfKeywords {
 			    	flag=true;
 			    	break;
 			    }
-			   }
+		     }
 		  }
 		}
 		return flag;

@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class TextOut {
-	 //Êä³öÎÄµµÖĞ¹Ø¼ü×Ö¼°Æä¸öÊıºÍSwitch½á¹¹ÖĞcases¸öÊıµÄ·½·¨
+	 //è¾“å‡ºæ–‡æ¡£ä¸­å…³é”®å­—åŠå…¶ä¸ªæ•°å’ŒSwitchç»“æ„ä¸­casesä¸ªæ•°çš„æ–¹æ³•
 	  public static void textOut(Map<String,Integer>map,ArrayList<Integer> list,int totalnum,int level)
-	  //´«Èë±£´æºÃµÄ¹Ø¼ü×Ö¡ª¸öÊıÓ³Éä£¬cases¸öÊıÁĞ±í£¬¹Ø¼ü×Ö×ÜÊıÓÃÓÚÊä³ö
+	  //ä¼ å…¥ä¿å­˜å¥½çš„å…³é”®å­—â€”ä¸ªæ•°æ˜ å°„ï¼Œcasesä¸ªæ•°åˆ—è¡¨ï¼Œå…³é”®å­—æ€»æ•°ç”¨äºè¾“å‡º
 	  {   int sum=0;
-		  System.out.printf("total num: %d\n",totalnum);//Êä³ö¹Ø¼ü×Ö×ÜÊı
+		  System.out.printf("total num: %d\n",totalnum);//è¾“å‡ºå…³é”®å­—æ€»æ•°
 		  for (String i : map.keySet())
 		  {
-			    if(i!="case") System.out.printf("%s num: %d\n",i,map.get(i));//¹Ø¼ü×Ö²»ÊÇcaseÊ±£¬Ö»Êä³ö¸öÊı
+			    if(i!="case") System.out.printf("%s num: %d\n",i,map.get(i));//å…³é”®å­—ä¸æ˜¯caseæ—¶ï¼Œåªè¾“å‡ºä¸ªæ•°
 			    else
-			    {   if(level>=2)//Íê³ÉµÈ¼¶Îª2¼°ÒÔÉÏÊ±£¬Êä³öcases¸öÊıÁĞ±í
+			    {   if(level>=2)//å®Œæˆç­‰çº§ä¸º2åŠä»¥ä¸Šæ—¶ï¼Œè¾“å‡ºcasesä¸ªæ•°åˆ—è¡¨
 			     {	System.out.printf("%s num:",i);
 			    	for(int k=0;k<list.size();k++)
 			    	{System.out.printf(" %d",list.get(k));
 			    	}
 			    	System.out.printf("\n");
 			     }
-			       else //Íê³ÉµÈ¼¶Îª1Ê±£¬Ö»Êä³öcases¸öÊı
+			       else  //å®Œæˆç­‰çº§ä¸º1æ—¶ï¼Œåªè¾“å‡ºcasesä¸ªæ•°
 			     { for(int k=0;k<list.size();k++)
 			    	{ sum+=list.get(k);
 			    	}

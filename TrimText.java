@@ -2,9 +2,9 @@ package keyword;
 
 public class TrimText {
 	public static String trimText (String text)
-	//Ìá¹©ÁËÉ¾³ıCPPÎÄ±¾ÖĞµÄ×¢ÊÍ£¬×Ö·û´®¹¦ÄÜ£¬·ÀÖ¹ÌáÈ¡¹Ø¼ü´ÊÊ±³öÏÖÎóÅĞ
+	//æä¾›äº†åˆ é™¤CPPæ–‡æœ¬ä¸­çš„æ³¨é‡Šï¼Œå­—ç¬¦ä¸²åŠŸèƒ½ï¼Œé˜²æ­¢æå–å…³é”®è¯æ—¶å‡ºç°è¯¯åˆ¤
 	{
-		while(text.contains("\""))//É¾³ı×Ö·û´®
+		while(text.contains("\""))//åˆ é™¤å­—ç¬¦ä¸²
 	    {
 			int index=text.indexOf('\"');
 			int index2=text.indexOf('\"', index+1);
@@ -12,7 +12,7 @@ public class TrimText {
 			if(index<0||index2<0) break;
 			text=text.replace(s,"");
 		}
-		while(text.contains("//"))//É¾³ı×¢ÊÍ
+		while(text.contains("//"))//åˆ é™¤æ³¨é‡Š
 	    {
 			int index=text.indexOf("//");
 			int index2=text.indexOf("\n", index+1);
@@ -20,7 +20,7 @@ public class TrimText {
 			if(index<0||index2<0) break;
 			text=text.replace(s,"");
 		}
-		while(text.contains("/*"))//É¾³ı¶àĞĞ×¢ÊÍ
+		while(text.contains("/*")) //åˆ é™¤å¤šè¡Œæ³¨é‡Š
 	    {
 			int index=text.indexOf("/*");
 			int index2=text.indexOf("*/", index+1);

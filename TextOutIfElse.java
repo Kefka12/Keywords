@@ -2,13 +2,13 @@ package keyword;
 
 
 public class TextOutIfElse {
-	//Êä³öÎÄµµÖĞif-elseºÍif-else-if½á¹¹¸öÊıµÄ·½·¨
+	//è¾“å‡ºæ–‡æ¡£ä¸­if-elseå’Œif-else-ifç»“æ„ä¸ªæ•°çš„æ–¹æ³•
 	public static void outOfIfElse(int num1)
 	{
-		  System.out.printf("if-else num: %d\n",num1);//Êä³öÎÄµµÖĞif-else½á¹¹¸öÊı	 
+		  System.out.printf("if-else num: %d\n",num1);//è¾“å‡ºæ–‡æ¡£ä¸­if-elseç»“æ„ä¸ªæ•°	 
 	}
 	public static void outOfIfElseIfElse(int num2)
 	{
-		  System.out.printf("if-elseif-else num: %d\n",num2);//Êä³öÎÄµµÖĞif-else-if½á¹¹¸öÊı
+		  System.out.printf("if-elseif-else num: %d\n",num2);//è¾“å‡ºæ–‡æ¡£ä¸­if-else-ifç»“æ„ä¸ªæ•° 
 	} 
 }

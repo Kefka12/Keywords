@@ -3,25 +3,25 @@ package keyword;
 import java.util.ArrayList;
 
 public class Mainproject {
-    //ÏîÄ¿Ö÷Ìå£¬ÓÃÒÔÖ´ĞĞ¸÷Ïî²Ù×÷ºÍ½øĞĞ³ÌĞòÉèÖÃ
+    //é¡¹ç›®ä¸»ä½“ï¼Œç”¨ä»¥æ‰§è¡Œå„é¡¹æ“ä½œå’Œè¿›è¡Œç¨‹åºè®¾ç½®
 	public static void main(String[] args) {
 		String path=null;
 		int level=4;
 		if(args.length==0) {path = "d:\\test1.cpp";}
 		else path=args[0];
-		if(args.length==2) {level=Integer.parseInt(args[1]) ;}//³ÌĞò´«²Î²¢Éè¶¨Ä¬ÈÏÖµ£¬²ÎÊıÒ»ÎªÂ·¾¶£¬²ÎÊı¶şÎªÍê³ÉµÈ¼¶
-        String text=FileToString.fileToString(path);//´ÓÎÄ¼şÖĞÌáÈ¡×Ö·û´®ÎÄ±¾
-        text=TrimText.trimText(text);//É¾³ıÎÄ±¾ÖĞµÄ×Ö·û´®ºÍ×¢ÊÍ
+		if(args.length==2) {level=Integer.parseInt(args[1]) ;}//ç¨‹åºä¼ å‚å¹¶è®¾å®šé»˜è®¤å€¼ï¼Œå‚æ•°ä¸€ä¸ºè·¯å¾„ï¼Œå‚æ•°äºŒä¸ºå®Œæˆç­‰çº§
+                String text=FileToString.fileToString(path);//ä»æ–‡ä»¶ä¸­æå–å­—ç¬¦ä¸²æ–‡æœ¬
+                text=TrimText.trimText(text);//åˆ é™¤æ–‡æœ¬ä¸­çš„å­—ç¬¦ä¸²å’Œæ³¨é‡Š
 		final String[] keywords={"do","auto","break","case","char","const"
 				,"continue","default","double","else","enum"
 				,"extern","float","for","goto","if","int","long","register"
 				,"return","short","signed","sizeof","static","struct","switch"
-				,"typedef","union","unsigned","void","volatile","while"};//¶¨Òå¹Ø¼ü×ÖÁĞ±í³£Á¿
+				,"typedef","union","unsigned","void","volatile","while"};//å®šä¹‰å…³é”®å­—åˆ—è¡¨å¸¸é‡
 		ArrayList<String> list= SearchIfAndElse.searchIfAndElse(text);
-		StaticsOfKeywords.staticsOfKeywords(keywords, text,level);//¸ù¾İÎÄ±¾ºÍÍê³ÉµÈ¼¶Íê³É¹Ø¼ü×ÖÍ³¼Æ²¢Êä³ö1¡¢2¼¶½á¹û
-		int[] num= StaticsOfIfElse.staticsOfStructs(list);//Íê³Éif-elseºÍif-else-if½á¹¹Í³¼Æ
-		if(level>=3) TextOutIfElse.outOfIfElse(num[0]);//µÈ¼¶Îª3»òÒÔÉÏ Êä³öif-else½á¹¹Êı
-		if(level>=4) TextOutIfElse.outOfIfElseIfElse(num[1]);//µÈ¼¶Îª4 Êä³öif-else-if½á¹¹Êı
+		StaticsOfKeywords.staticsOfKeywords(keywords, text,level);//æ ¹æ®æ–‡æœ¬å’Œå®Œæˆç­‰çº§å®Œæˆå…³é”®å­—ç»Ÿè®¡å¹¶è¾“å‡º1ã€2çº§ç»“æœ
+		int[] num= StaticsOfIfElse.staticsOfStructs(list);//å®Œæˆif-elseå’Œif-else-ifç»“æ„ç»Ÿè®¡
+		if(level>=3) TextOutIfElse.outOfIfElse(num[0]);//ç­‰çº§ä¸º3æˆ–ä»¥ä¸Š è¾“å‡ºif-elseç»“æ„æ•°
+		if(level>=4) TextOutIfElse.outOfIfElseIfElse(num[1]);//ç­‰çº§ä¸º4 è¾“å‡ºif-else-ifç»“æ„æ•°
 	}
    
 

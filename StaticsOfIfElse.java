@@ -4,27 +4,28 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class StaticsOfIfElse {
-	public static int[] staticsOfStructs(ArrayList<String> list) //´ÓÒÑ¾­±»´æ·ÅºÃµÄif else else-if¹Ø¼ü×ÖÁĞ±íÖĞÍ³¼Æ½á¹¹Êı
-	{   int[] num= {0,0};//num[0]´æ·Åif-else½á¹¹Êı£¬num[1]´æ·Åif-else-if½á¹¹Êı;     
-		Stack<String> st=new Stack<String>(); //´´½¨ĞÂ¶ÑÕ»ÓÃÓÚÅĞ¶Ï½á¹¹Êı
+	//å®ç°äº†ä»if,else,else ifåˆ—è¡¨ä¸­ç»Ÿè®¡if-elseç»“æ„æ•°å’Œif-else-ifç»“æ„æ•°çš„æ–¹æ³•
+	public static int[] staticsOfStructs(ArrayList<String> list) //ä»å·²ç»è¢«å­˜æ”¾å¥½çš„if else else-ifå…³é”®å­—åˆ—è¡¨ä¸­ç»Ÿè®¡ç»“æ„æ•°
+	{   int[] num= {0,0};//num[0]å­˜æ”¾if-elseç»“æ„æ•°ï¼Œnum[1]å­˜æ”¾if-else-ifç»“æ„æ•°;     
+		Stack<String> st=new Stack<String>(); //åˆ›å»ºæ–°å †æ ˆç”¨äºåˆ¤æ–­ç»“æ„æ•°
 	    int size=list.size();  
-	    String[] array = (String[])list.toArray(new String[size]);//ÒòÎªÎŞĞè¶¯Ì¬Ìí¼Ó£¬½«ÁĞ±í×¨ÎªÊı×é±ãÓÚ²Ù×÷  
+	    String[] array = (String[])list.toArray(new String[size]);//å› ä¸ºæ— éœ€åŠ¨æ€æ·»åŠ ï¼Œå°†åˆ—è¡¨ä¸“ä¸ºæ•°ç»„ä¾¿äºæ“ä½œ  
 	    for(int i=0;i<array.length;i++)
 		{    String s=array[i];
 		     //System.out.println(s);
-	    	 if(s.equals("if")||s.equals("else if"))//Èç¹ûÊÇif ºÍelse-ifÔòÈëÕ»
+	    	 if(s.equals("if")||s.equals("else if"))//å¦‚æœæ˜¯if å’Œelse-ifåˆ™å…¥æ ˆ
 			 {
 			   st.push(s);
 		     }
-			 if(s.equals("else"))//Èç¹ûÊÇelseÔòÊ×ÏÈÅĞ¶ÏÕ»¶¥
-			 { if(!st.empty()&&st.peek().equals("else if"))//Õ»¶¥Îªelse ifÔò½«ËùÓĞelse if³öÕ»Ö±µ½Õ»¶¥Îªif
-			   { num[1]++;//if-else-if½á¹¹Êı+1
+			 if(s.equals("else"))//å¦‚æœæ˜¯elseåˆ™é¦–å…ˆåˆ¤æ–­æ ˆé¡¶
+			 { if(!st.empty()&&st.peek().equals("else if"))//æ ˆé¡¶ä¸ºelse ifåˆ™å°†æ‰€æœ‰else ifå‡ºæ ˆç›´åˆ°æ ˆé¡¶ä¸ºif
+			   { num[1]++;//if-else-ifç»“æ„æ•°+1
 			     while(!st.empty()&&!st.peek().equals("if")) st.pop();
-			     if(!st.empty()&&st.peek().equals("if")) st.pop();//Õ»¶¥Îªif£¬³öÕ»
+			     if(!st.empty()&&st.peek().equals("if")) st.pop();//æ ˆé¡¶ä¸ºifï¼Œå‡ºæ ˆ
 			   }
 			   else
-			   { num[0]++;//if-else½á¹¹Êı+1
-			     if(!st.empty()) st.pop(); //Õ»¶¥Îªif£¬³öÕ»
+			   { num[0]++;//if-elseç»“æ„æ•°+1
+			     if(!st.empty()) st.pop(); //æ ˆé¡¶ä¸ºifï¼Œå‡ºæ ˆ
 			   }
 			}
 		}

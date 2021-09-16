@@ -6,18 +6,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StaticsOfKeywords {
-	  //ÊµÏÖÁËÔÚÎÄ¶ÎÖĞÍ³¼Æ¹Ø¼ü×Ö¼°Æä¸öÊıºÍSwitch½á¹¹ÖĞcases¸öÊıµÄ·½·¨
+	  //å®ç°äº†åœ¨æ–‡æ®µä¸­ç»Ÿè®¡å…³é”®å­—åŠå…¶ä¸ªæ•°å’ŒSwitchç»“æ„ä¸­casesä¸ªæ•°çš„æ–¹æ³•
 	  public static void staticsOfKeywords(String[] words,String text,int level)
-	  { Map<String,Integer>map = new HashMap<>();//½¨Á¢¹şÏ£±í´æ´¢¹Ø¼ü×Ö-¸öÊıÓ³Éä
-	    int totalnum=0;//´æ´¢×Ü¹Ø¼ü×Ö¸öÊı
-		ArrayList<Integer> list= new ArrayList<Integer>();//´æ´¢cases¸öÊıÁĞ±í
+	  { Map<String,Integer>map = new HashMap<>();//å»ºç«‹å“ˆå¸Œè¡¨å­˜å‚¨å…³é”®å­—-ä¸ªæ•°æ˜ å°„
+	    int totalnum=0;//å­˜å‚¨æ€»å…³é”®å­—ä¸ªæ•°
+		ArrayList<Integer> list= new ArrayList<Integer>();//å­˜å‚¨casesä¸ªæ•°åˆ—è¡¨
 		for(int i=0;i<words.length;i++)
 	    { String word=words[i];
 	      int count=0;
-	      String copytext=text;//¸´ÖÆÒ»¸ö×Ö·û´®ÎÄ±¾ÒÔ±£Ö¤¶ÔÓÚÃ¿¸ö¹Ø¼ü×Ö¶¼ÄÜÖØ¸´ÌáÈ¡
+	      String copytext=text;//å¤åˆ¶ä¸€ä¸ªå­—ç¬¦ä¸²æ–‡æœ¬ä»¥ä¿è¯å¯¹äºæ¯ä¸ªå…³é”®å­—éƒ½èƒ½é‡å¤æå–
 		  while(copytext.contains(words[i]))
 		  { 
-			int index = copytext.indexOf(word);//ÕÒµ½¹Ø¼ü×Ö×Ó×Ö·û´®Î»ÖÃ
+			int index = copytext.indexOf(word);//æ‰¾åˆ°å…³é”®å­—å­å­—ç¬¦ä¸²ä½ç½®
 		    char judge=copytext.charAt(index+ word.length());
 		    char judge2=' ';
 		    if(index>0) judge2=copytext.charAt(index-1);
@@ -25,22 +25,22 @@ public class StaticsOfKeywords {
 				  ||(judge2>='a'&&judge2<='z')||(judge2>='A'&&judge2<='Z')||(judge2>='0'&&judge2<='9')||(judge2=='_'))
 	        {   copytext = copytext.substring(index + word.length());
 			    continue;
-	        } //Èç¹û×Ó×Ö·û´®²»ÊÇ¹Ø¼ü×ÖÔòÌø¹ı
+	        } //å¦‚æœå­å­—ç¬¦ä¸²ä¸æ˜¯å…³é”®å­—åˆ™è·³è¿‡
 		    else
 		    {	count++;
 			    copytext = copytext.substring(index + word.length());
-			    totalnum++;//ÊÇ¹Ø¼ü×ÖÔòÌáÈ¡
+			    totalnum++;//æ˜¯å…³é”®å­—åˆ™æå–
 			    if(words[i].equals("switch"))
 			    {  Integer countofcase=SearchCases.searchCases(copytext);
 			       list.add(countofcase);
-			    }//Èç¹ûÊÇswitchÔò¶îÍâÍ³¼ÆÆä½á¹¹ÄÚcase¸öÊı
+			    }//å¦‚æœæ˜¯switchåˆ™é¢å¤–ç»Ÿè®¡å…¶ç»“æ„å†…caseä¸ªæ•°
 		    }	
 		  }
 		  if(count>0)
 		  {   
-		    map.put(words[i],count);//Èç¹ûÓĞÍ³¼Æµ½¸Ã¹Ø¼ü×Ö£¬Ôò°Ñ¹Ø¼ü×Ö-¸öÊıÓ³Éä´æÈë¹şÏ£±í
+		    map.put(words[i],count);//å¦‚æœæœ‰ç»Ÿè®¡åˆ°è¯¥å…³é”®å­—ï¼Œåˆ™æŠŠå…³é”®å­—-ä¸ªæ•°æ˜ å°„å­˜å…¥å“ˆå¸Œè¡¨
 		  } 
 	   }
-	   TextOut.textOut(map, list, totalnum,level);//Êä³öÍ³¼ÆĞÅÏ¢
+	   TextOut.textOut(map, list, totalnum,level); //è¾“å‡ºç»Ÿè®¡ä¿¡æ¯
 	 }
 }

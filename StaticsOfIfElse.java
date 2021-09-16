@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class StaticsOfIfElse {
 	//实现了从if,else,else if列表中统计if-else结构数和if-else-if结构数的方法
-	public static int[] staticsOfStructs(ArrayList<String> list) //从已经被存放好的if else else-if关键字列表中统计结构数
+	public static int[] staticsOfStructs(ArrayList<String> list)  //从已经被存放好的if else else-if关键字列表中统计结构数
 	{   int[] num= {0,0};//num[0]存放if-else结构数，num[1]存放if-else-if结构数;     
 		Stack<String> st=new Stack<String>(); //创建新堆栈用于判断结构数
 	    int size=list.size();  

@@ -3,18 +3,18 @@ package keyword;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-//ÊµÏÖÁË½«CPPÎÄ¼şÌáÈ¡Îª×Ö·û´®ÎÄ±¾µÄ·½·¨
+//å®ç°äº†å°†CPPæ–‡ä»¶æå–ä¸ºå­—ç¬¦ä¸²æ–‡æœ¬çš„æ–¹æ³•
 public class FileToString {
 	      
 	   public static String fileToString(String path)
 	   {		   
-		   String content=null; //¶¨Òå¿Õ×Ö·û´®´æ´¢ÌáÈ¡µÄÎÄ±¾
+		String content=null; //å®šä¹‰ç©ºå­—ç¬¦ä¸²å­˜å‚¨æå–çš„æ–‡æœ¬
 	        try {
-	            content = Files.readString(Paths.get(path));//´ÓÖ¸¶¨Â·¾¶ÌáÈ¡ÎÄ¼ş£¬¶ÁÈëÊäÈëÁ÷£¬×ª»¯Îª×Ö·û´®	       	 
+	            content = Files.readString(Paths.get(path));//ä»æŒ‡å®šè·¯å¾„æå–æ–‡ä»¶ï¼Œè¯»å…¥è¾“å…¥æµï¼Œè½¬åŒ–ä¸ºå­—ç¬¦ä¸²	       	 
 	            } 
 	        catch (IOException e) {
 	        e.printStackTrace();
-	                              }//´íÎó²¶×½
-	        return content;//·µ»ØÊä³öµÄ×Ö·û´®
+	                              }//é”™è¯¯æ•æ‰
+	        return content;//è¿”å›è¾“å‡ºçš„å­—ç¬¦ä¸²
 	   }
 }

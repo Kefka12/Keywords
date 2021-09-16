@@ -3,24 +3,24 @@ package keyword;
 import java.util.ArrayList;
 
 public class SearchIfAndElse {
-	//ÊµÏÖÁË´ÓÎÄ¶ÎÖĞÌáÈ¡if£¬elseºÍelse if¹Ø¼ü×Ö²¢´æÈëÁĞ±íÒÔ±ã½øÒ»²½Í³¼Æ½á¹¹ÊıµÄ·½·¨
+	//å®ç°äº†ä»æ–‡æ®µä¸­æå–ifï¼Œelseå’Œelse ifå…³é”®å­—å¹¶å­˜å…¥åˆ—è¡¨ä»¥ä¾¿è¿›ä¸€æ­¥ç»Ÿè®¡ç»“æ„æ•°çš„æ–¹æ³•
 	public static ArrayList<String>searchIfAndElse(String text)
 	{      
-	    ArrayList<String> list= new ArrayList<String>();//´´½¨ÁĞ±í£¬ÓÃÓÚ°´³öÏÖË³Ğò´æÈëÎÄ±¾ÖĞµÄËùÓĞif,else,else if¹Ø¼ü×Ö
-	    int index1=0,index2=0,index3=0;//ÓÃÓÚ·Ö±ğ´æ´¢Èı¸ö¹Ø¼ü×ÖµÄÒ»¸ö
+	    ArrayList<String> list= new ArrayList<String>();//åˆ›å»ºåˆ—è¡¨ï¼Œç”¨äºæŒ‰å‡ºç°é¡ºåºå­˜å…¥æ–‡æœ¬ä¸­çš„æ‰€æœ‰if,else,else ifå…³é”®å­—
+	    int index1=0,index2=0,index3=0;//ç”¨äºåˆ†åˆ«å­˜å‚¨ä¸‰ä¸ªå…³é”®å­—çš„ä¸€ä¸ª
 	    boolean flag1=JudgeOfKeywords.judgeWords(text, "if");
 	    boolean flag2=JudgeOfKeywords.judgeWords(text, "else");
-	    boolean flag3=JudgeOfKeywords.judgeWords(text, "else if");//Ê×ÏÈ·Ö±ğÅĞ¶ÏÎÄ±¾ÖĞÊÇ·ñº¬ÓĞÕâÈı¸ö¹Ø¼ü×Ö		  
-		while(flag1||flag2||flag3)//²»¶ÏÌáÈ¡Ö±µ½ÕâÈı¸ö¹Ø¼ü×ÖÍêÈ«±»ÌáÈ¡Íê±Ï£¨ÎÄ±¾ÖĞ²»º¬ÓĞÕâÈı¸ö¹Ø¼ü×Ö£©
+	    boolean flag3=JudgeOfKeywords.judgeWords(text, "else if");//é¦–å…ˆåˆ†åˆ«åˆ¤æ–­æ–‡æœ¬ä¸­æ˜¯å¦å«æœ‰è¿™ä¸‰ä¸ªå…³é”®å­—		  
+		while(flag1||flag2||flag3)//ä¸æ–­æå–ç›´åˆ°è¿™ä¸‰ä¸ªå…³é”®å­—å®Œå…¨è¢«æå–å®Œæ¯•ï¼ˆæ–‡æœ¬ä¸­ä¸å«æœ‰è¿™ä¸‰ä¸ªå…³é”®å­—ï¼‰
 		{ 
 		  index1=text.length();
 		  index2=text.length();
-		  index3=text.length();  //Ã¿´ÎÑ­»·½«Èı¸öË÷ÒıÖÃ×î´óÖµ ·ÀÖ¹ÅĞ¶Ï³ö´í
+		  index3=text.length();  //æ¯æ¬¡å¾ªç¯å°†ä¸‰ä¸ªç´¢å¼•ç½®æœ€å¤§å€¼ é˜²æ­¢åˆ¤æ–­å‡ºé”™
 		  if(flag1) index1 = text.indexOf("if");
 		  int index=0;
 		  String word=null,copytext=text;
 		  if(flag2) index2=SearchElse.searchIndexOfElse(copytext);
-		  if(flag3) index3 = text.indexOf("else if"); //Ñ°ÕÒÈı¸ö¹Ø¼ü×ÖÔÚÎÄ¶ÎÖĞµÄË÷Òı£¨Èç¹ûÓĞµÄ»°£©
+		  if(flag3) index3 = text.indexOf("else if"); //å¯»æ‰¾ä¸‰ä¸ªå…³é”®å­—åœ¨æ–‡æ®µä¸­çš„ç´¢å¼•ï¼ˆå¦‚æœæœ‰çš„è¯ï¼‰
 		  if(flag1&&index1<=index2&&index1<=index3)  
 		  { 
 			word="if";
@@ -35,7 +35,7 @@ public class SearchIfAndElse {
 		  {  
 			word="else if";
 		    index=index3;
-		  } //ÕÒ³öÎÄ¶ÎÖĞµÚÒ»¸ö³öÏÖµÄif,else,else if¹Ø¼ü×Ö×Ó×Ö·û´®
+		  } //æ‰¾å‡ºæ–‡æ®µä¸­ç¬¬ä¸€ä¸ªå‡ºç°çš„if,else,else ifå…³é”®å­—å­å­—ç¬¦ä¸²
 		  char judge=text.charAt(index+ word.length());
 		  char judge2=' ';
 		  if(index>0) judge2=text.charAt(index-1);
@@ -49,12 +49,12 @@ public class SearchIfAndElse {
 		  {	 
 			  list.add(word);
 			  text = text.substring(index + word.length());  
-		  } //ÅĞ¶ÏÊÇ·ñÎª¹Ø¼ü×Ö£¬ÈôÊÇÔò¼ÓÈëÁĞ±í
+		  } //åˆ¤æ–­æ˜¯å¦ä¸ºå…³é”®å­—ï¼Œè‹¥æ˜¯åˆ™åŠ å…¥åˆ—è¡¨
 		  //String test=text.substring(0, 10);
 		  //System.out.printf("%s I1:%d I2:%d I3:%d\n",test,index1,index2,index3);
 		  flag1=JudgeOfKeywords.judgeWords(text, "if");
 	      flag2=JudgeOfKeywords.judgeWords(text, "else");
-	      flag3=JudgeOfKeywords.judgeWords(text, "else if");	//ÔÙ´Î¶ÔÎÄ¶ÎÖĞÊÇ·ñ´æÔÚÕâĞ©¹Ø¼ü×Ö½øĞĞÅĞ¶Ï×÷ÎªÏÂ´ÎÑ­»·µÄÌõ¼ş
+	      flag3=JudgeOfKeywords.judgeWords(text, "else if");//å†æ¬¡å¯¹æ–‡æ®µä¸­æ˜¯å¦å­˜åœ¨è¿™äº›å…³é”®å­—è¿›è¡Œåˆ¤æ–­ä½œä¸ºä¸‹æ¬¡å¾ªç¯çš„æ¡ä»¶
 	   }
 	   return list;
 	}

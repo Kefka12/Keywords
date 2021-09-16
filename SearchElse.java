@@ -1,7 +1,7 @@
 package keyword;
 
 public class SearchElse {
-	//ÊµÏÖÁË´ÓÎÄ¶ÎÖĞËÑË÷²¢ÌáÈ¡µÚÒ»¸öelse¹Ø¼ü×ÖÎ»ÖÃµÄ·½·¨£¨Ö÷ÒªÎªÁËÓëelse-ifÖĞµÄelseÇø·Ö£©	
+	//å®ç°äº†ä»æ–‡æ®µä¸­æœç´¢å¹¶æå–ç¬¬ä¸€ä¸ªelseå…³é”®å­—ä½ç½®çš„æ–¹æ³•ï¼ˆä¸»è¦ä¸ºäº†ä¸else-ifä¸­çš„elseåŒºåˆ†ï¼‰	
 	public static int searchIndexOfElse(String copytext)
 	{   int index2=copytext.length()-1;
 		while(copytext.contains("else"))
@@ -11,7 +11,7 @@ public class SearchElse {
 			  char judge2=' ';
 			  if(index>0) judge2=copytext.charAt(index-1);
 		      if((judge>='a'&&judge<='z')||(judge>='A'&&judge<='Z')||(judge>='0'&&judge<='9')||(judge=='_')||(judges=="else if")
-		    	||(judge2>='a'&&judge2<='z')||(judge2>='A'&&judge2<='Z')||(judge2>='0'&&judge2<='9')||(judge2=='_'))//else ifÌØ±ğÅĞ¶Ï
+		    	||(judge2>='a'&&judge2<='z')||(judge2>='A'&&judge2<='Z')||(judge2>='0'&&judge2<='9')||(judge2=='_'))//else ifç‰¹åˆ«åˆ¤æ–­
 	          {   copytext = copytext.substring(index + 4);
 			    continue;
 	          }
@@ -20,7 +20,7 @@ public class SearchElse {
 		    	index2=index;
 		    	break;
 		      }
-		} //¸Ã·½·¨ÁËËÑÑ°³öÒ»´®×ÓÎÄ±¾ÖĞµÚÒ»¸öelseµÄÎ»ÖÃµÄ·½·¨£¬¾ßÌåÊµÏÖÓëJudgeOfKeywordsÀàËÆ
+		}  //è¯¥æ–¹æ³•äº†æœå¯»å‡ºä¸€ä¸²å­æ–‡æœ¬ä¸­ç¬¬ä¸€ä¸ªelseçš„ä½ç½®çš„æ–¹æ³•ï¼Œå…·ä½“å®ç°ä¸JudgeOfKeywordsç±»ä¼¼
 	    return index2;
 	}
 }

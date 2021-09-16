@@ -1,18 +1,18 @@
 package keyword;
 
 public class SearchCases {
-   //ÊµÏÖÁËÔÚÒ»×éSwitch½á¹¹ÖĞÍ³¼ÆcaseÊıµÄ·½·¨
+   //å®ç°äº†åœ¨ä¸€ç»„Switchç»“æ„ä¸­ç»Ÿè®¡caseæ•°çš„æ–¹æ³•
    public static Integer searchCases(String copytext)
    {
 	    int indexofendcase=copytext.indexOf("default");
-	    //ÓÉÓÚÄ¬ÈÏCPPÎÄ¼şÄÜÍ¨¹ı±àÒëÇÒÎŞÇ¶Ì×switch£¬Òò´Ë½«default¹Ø¼ü×Ö×÷ÎªÒ»×éSwitch½á¹¹½áÊøµÄ±êÖ¾
+	    //ç”±äºé»˜è®¤CPPæ–‡ä»¶èƒ½é€šè¿‡ç¼–è¯‘ä¸”æ— åµŒå¥—switchï¼Œå› æ­¤å°†defaultå…³é”®å­—ä½œä¸ºä¸€ç»„Switchç»“æ„ç»“æŸçš„æ ‡å¿—
 		Integer countofcase=0;			  
-        String temptext=copytext.substring(0,indexofendcase);//½«Ò»×éswitch½á¹¹½ØÈ¡½øĞĞÅĞ¶Ï
-		while(	JudgeOfKeywords.judgeWords(temptext,"case"))//ÅĞ¶Ï
+                 String temptext=copytext.substring(0,indexofendcase);//å°†ä¸€ç»„switchç»“æ„æˆªå–è¿›è¡Œåˆ¤æ–­
+		while(	JudgeOfKeywords.judgeWords(temptext,"case"))//åˆ¤æ–­
 		{  int indexofcase=temptext.indexOf("case");
 			countofcase++;
 			temptext = temptext.substring(indexofcase + 4);
-		}//ÅĞ¶Ïswitch½á¹¹ÖĞcaseÊı
+		}//åˆ¤æ–­switchç»“æ„ä¸­caseæ•°
 		return countofcase;
    }
 }

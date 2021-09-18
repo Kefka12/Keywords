@@ -11,11 +11,11 @@ public class JudgeOfKeywords {
 		  {
 			  while(text.contains(word)) //不停搜索直到文本不含有关键字子字符串
 			   {char judge=' ';
-			    if(index+ word.length()<text.length()-1) text.charAt(index+ word.length());
+			    if(index+ word.length()<text.length()-1) judge=text.charAt(index+ word.length());
 			    char judge2=' ';
 			    if(index>0&&index<=text.length()) judge2=text.charAt(index-1);
 			    String judges=" ";
-			    if(index+7<text.length())judges=text.substring(index, index+7); 
+			    if(index+7<text.length()) judges=text.substring(index, index+7); 
 			    //创建三种判断依据变量——关键字子字符串的前一个和后一个字符，以及包含有关键字子字符串后三个字符的字符串
 			    if((judge>='a'&&judge<='z')||(judge>='A'&&judge<='Z')||(judge>='0'&&judge<='9')||(judge=='_')||(judges.equals("else if"))//此处额外判断else if情况
 			    		||(judge2>='a'&&judge2<='z')||(judge2>='A'&&judge2<='Z')||(judge2>='0'&&judge2<='9')||(judge2=='_'))
